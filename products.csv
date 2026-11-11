@@ -1,4 +1,4 @@
-id,category,subcategory,name,price,remark,description,tags,priceType
+﻿id,category,subcategory,name,price,remark,description,tags,priceType
 YY-001,实体类,符箓大类,各种形式的符,详情咨询,待补充,有四种形式：三角形折纸符、画框符、法扇、卷轴。有三个品级：民间符箓、天师符箓、上古神符。根据形式不同，有效期有差别。详情具体咨询。,传统祈福、姻缘、实体物品、求子、符箓,consult
 YY-002,实体类,饰品,具体来图可定制,定制详情咨询,待补充,根据个人的属性，净化杂气，护佑平安，挡煞避凶，祈福助运，顺遂心意，咕咕buff。需定期寄回重新开光,定制、实体物品、平安、开光、祈福、饰品,consult
 YY-003,实体类,香囊,端午香囊,36、58、88,待补充,36(安神，驱蚊，防疫，解暑，提神，疏肝解郁)；58(端午)；88(辟邪),健康关切、实体物品、平安、节庆、香囊,range
