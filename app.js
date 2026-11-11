@@ -356,7 +356,8 @@ function explore() {
         </div>
 
         <div class="subactions">
-          <button data-act="results">先看看推荐</button>
+  ${n > 0 ? '<button data-act="previous">← 返回上一级</button>' : ''}
+  <button data-act="results">先看看推荐</button>
           <button data-act="restart">重新探索</button>
           <button data-act="catalog">直接查看服务</button>
         </div>
@@ -566,6 +567,7 @@ function results() {
         <pre>${escape(summary())}</pre>
         <button data-act="copy">复制我的需求摘要</button>
         <button data-act="edit">修改选择</button>
+        <button data-act="previous">← 返回上一级</button>
       </aside>
 
       <section class="results">
@@ -888,6 +890,11 @@ function bind() {
         choose('不确定', '我不确定属于哪类');
       }
       else if (a === 'explore') view('explore');
+      else if (a === 'previous') {
+
+  back(S.view === 'results' ? Math.max(0, S.answers.length - 1) : Math.max(0, S.step - 1));
+
+}
       else if (a === 'edit') back(Math.max(0, S.answers.length - 1));
       else if (a === 'results') view('results');
       else if (a === 'catalog') view('catalog');
