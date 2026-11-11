@@ -442,18 +442,53 @@ function match(p) {
 }
 
 function matches() {
+
   if (!S.answers.length) return [];
 
-  return P.map(p => ({
+  // 计算所有产品的匹配分数
+
+  const all = P.map(p => ({
+
     p,
+
     ...match(p)
+
   }))
+
     .filter(x => x.score >= 49 && x.why.length)
+
     .sort((a, b) =>
+
       b.score - a.score ||
+
       a.p.id.localeCompare(b.p.id)
-    )
-    .slice(0, 3);
+
+    );
+
+  // 先选择最匹配的3种产品
+
+  const selected = [];
+
+  const names = new Set();
+
+  for (const item of all) {
+
+    if (!names.has(item.p.name)) {
+
+      selected.push(item);
+
+      names.add(item.p.name);
+
+    }
+
+    if (selected.length >= 3) break;
+
+  }
+
+  // 将选中产品的所有匹配规格一起展示
+
+  return all.filter(item => names.has(item.p.name));
+
 }
 
 function summary() {
