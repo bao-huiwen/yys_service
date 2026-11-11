@@ -29,3 +29,48 @@
  .hero-center .home-links button{font-size:12px}
 }
 @media(max-width:370px){.hero-center h1{font-size:25px}.hero-side{font-size:23px}.hero-center .eyebrow{letter-spacing:.07em}}
+
+/* 全站返回上一级 */
+
+.global-back-wrap {
+  width: 100%;
+  padding-top: 22px;
+  margin-bottom: 5px;
+}
+
+.global-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 15px;
+  border: 1px solid #dcd4c3;
+  background: #f8f5ed;
+  color: #47665a;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.global-back:hover {
+  background: #e8eee8;
+  border-color: #a88752;
+  color: #15352e;
+}
+
+.global-back span {
+  font-size: 19px;
+  line-height: 1;
+}
+
+@media (max-width: 760px) {
+  .global-back-wrap {
+    padding-top: 14px;
+    margin-bottom: 0;
+  }
+
+  .global-back {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
