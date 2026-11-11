@@ -1049,14 +1049,7 @@ function detail() {
         <p>${escape(p.remark)}</p>
       </div>
 
-      <div class="detail-row">
-        <b>需求标签（依据描述整理，仅供导航）</b>
-        <p>
-          ${escape(
-            (p.tags || []).join('、') || '待补充'
-          )}
-        </p>
-      </div>
+
 
       <div class="actions">
 
